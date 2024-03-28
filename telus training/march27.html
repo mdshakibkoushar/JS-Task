@@ -30,9 +30,9 @@
 <body>
     <div class="container">
         <h1>Fetch User Data</h1>
-        <button id="fetch-callback">Fetch Data with Callbacks</button>
-        <button id="fetch-promise">Fetch Data with Promises</button>
-        <button id="fetch-async">Fetch Data with Async/Await</button>
+        <button id="fetch-callback">Get Data with Callbacks</button>
+        <button id="fetch-promise">Get Data with Promises</button>
+        <button id="fetch-async">Get Data with Async/Await</button>
         <div id="result"></div>
     </div>
     <script>
@@ -94,16 +94,9 @@ async function fetchDataWithAsyncAwait() {
     }
 }
 
-// Display the fetched data
-function displayData(data) {
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = ''; // Clear previous results
-
-    data.forEach(user => {
-        const userDiv = document.createElement('div');
-        userDiv.textContent = `User: ${user.name}, Email: ${user.email}`;
-        resultDiv.appendChild(userDiv);
-    });
+// Display the fetched data in console
+function displayDataInConsole(data) {
+    console.log('Fetched User Data:', data);
 }
 
 // Event listeners for each fetch method button
@@ -113,14 +106,14 @@ document.getElementById('fetch-callback').addEventListener('click', () => {
             console.error(error);
             document.getElementById('result').textContent = 'Error fetching data';
         } else {
-            displayData(data);
+            displayDataInConsole(data);
         }
     });
 });
 
 document.getElementById('fetch-promise').addEventListener('click', () => {
     fetchDataWithPromise()
-        .then(data => displayData(data))
+        .then(data => displayDataInConsole(data))
         .catch(error => {
             console.error(error);
             document.getElementById('result').textContent = 'Error fetching data';
@@ -130,13 +123,12 @@ document.getElementById('fetch-promise').addEventListener('click', () => {
 document.getElementById('fetch-async').addEventListener('click', async () => {
     try {
         const data = await fetchDataWithAsyncAwait();
-        displayData(data);
+        displayDataInConsole(data);
     } catch (error) {
         console.error(error);
         document.getElementById('result').textContent = 'Error fetching data';
     }
 });
-
         
     </script>
 </body>
