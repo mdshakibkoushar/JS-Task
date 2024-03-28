@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Task 22 march</h1>
+</body>
+<script>
+  // Array of numbers
+  const numbers = [7, 1, 4, 4, 6, 9];
+  console.log("Sum with reduce:", sumWithReduce(numbers));
+
+  // Function to calculate sum of all numbers in the array using reduce function
+  function sumWithReduce(arr) {
+    return arr.reduce((acc, curr) => acc + curr, 0);
+  }
+  const array = [1, 2, 3, 4, 5];
+  console.log(sumWithReduce(array));
+
+  // Function to calculate sum of all numbers in the array using a for loop
+  function sumWithForLoop(arr) {
+    let sum = 0;
+    for (let num of arr) {
+      sum += num;
+    }
+    return sum;
+  }
+  console.log("Sum with for loop:", sumWithForLoop(numbers));
+
+  // Function to find maximum and minimum values in the array after sorting
+  function findMaxAndMin(arr) {
+    const sortedArr = arr.slice().sort((a, b) => a - b);
+    const min = sortedArr[0];
+    const max = sortedArr[sortedArr.length - 1];
+    return { min, max };
+  }
+  console.log("Max and Min:", findMaxAndMin(numbers));
+
+  // Function to filter out even and odd numbers from the array
+  function filterEvenOdd(arr) {
+    const evens = arr.filter((num) => num % 2 === 0);
+    const odds = arr.filter((num) => num % 2 !== 0);
+    return { evens, odds };
+  }
+  console.log("Even and Odd numbers:", filterEvenOdd(numbers));
+
+  // Function to square each number in the array
+  function squareNumbers(arr) {
+    return arr.map((num) => num * num);
+  }
+  console.log("Square numbers:", squareNumbers(numbers));
+
+  // Function to check if a number is prime
+  function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    if (num % 2 === 0 || num % 3 === 0) return false;
+    let i = 5;
+    while (i * i <= num) {
+      if (num % i === 0 || num % (i + 2) === 0) return false;
+      i += 6;
+    }
+    return true;
+  }
+
+  // Function to find prime numbers from the array
+  function findPrimes(arr) {
+    return arr.filter((num) => isPrime(num));
+  }
+  console.log("Prime numbers:", findPrimes(numbers));
+
+  // Function to generate Fibonacci sequence up to a certain limit using while loop
+  function fibonacciWithWhile(limit) {
+    let fib = [0, 1];
+    while (fib[fib.length - 1] + fib[fib.length - 2] <= limit) {
+      fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+    }
+    return fib;
+  }
+  console.log("Fibonacci sequence with while loop:", fibonacciWithWhile(50));
+
+  // Function to generate Fibonacci sequence up to a certain limit using do-while loop
+  function fibonacciWithDoWhile(limit) {
+    let fib = [0, 1];
+    do {
+      fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+    } while (fib[fib.length - 1] + fib[fib.length - 2] <= limit);
+    return fib;
+  }
+  console.log(
+    "Fibonacci sequence with do-while loop:",
+    fibonacciWithDoWhile(50)
+  );
+
+  // Function to generate Fibonacci sequence up to a certain limit using for loop
+  function fibonacciWithFor(limit) {
+    let fib = [0, 2];
+    for (let i = 2; fib[i - 1] + fib[i - 2] <= limit; i++) {
+      fib.push(fib[i - 1] + fib[i - 2]);
+    }
+    return fib;
+  }
+  console.log("Fibonacci sequence with for loop:", fibonacciWithFor(50));
+</script>
+
+</html>

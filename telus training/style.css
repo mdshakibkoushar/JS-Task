@@ -1,0 +1,88 @@
+body {
+    font-family: "Amita", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url('/bg.avif');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    perspective: 1700px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.708); 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: rotateX(20deg); 
+    transform-origin: center bottom;
+}
+
+h1 {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+button[type="submit"] {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 100; 
+    background-color: hsl(146, 54%, 3%);
+    color: white;
+    padding: 15px; 
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s; 
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+.f {
+    display: flex;
+    align-items: center;
+}
+
+.f label {
+    margin-right: 15px;
+}
+
+.f input[type="radio"] {
+    margin-right: 5px;
+}

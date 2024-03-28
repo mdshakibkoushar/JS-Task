@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> TAsk 26 march</h1>
+</body>
+<script>
+    function extractWords(text) {
+        // Regular expression to extract words considering only alphabetic characters
+        return text.match(/[a-zA-Z]+/g) || [];
+    }
+    
+    function countOccurrences(text, words) {
+        // Initialize a map to store word counts
+        let wordCounts = {};
+    
+        // Extract words from the text
+        let textWords = extractWords(text);
+    
+        // Count occurrences of specific words
+        for (let word of textWords) {
+            if (words.has(word.toLowerCase())) {
+                wordCounts[word.toLowerCase()] = (wordCounts[word.toLowerCase()] || 0) + 1;
+            }
+        }
+    
+        return wordCounts;
+    }
+    
+    // Main function
+    function main() {
+        try {
+            // Get text input
+            let text = prompt("Enter the text:");
+            if (!text) {
+                throw new Error("Text input cannot be empty.");
+            }
+    
+            // Get words to count
+            let wordsInput = prompt("Enter words to count (separated by comma):");
+            if (!wordsInput) {
+                throw new Error("Words input cannot be empty.");
+            }
+            let wordsArray = wordsInput.split(",").map(word => word.trim().toLowerCase());
+            let wordsSet = new Set(wordsArray);
+    
+            // Count occurrences of words in text
+            let wordCounts = countOccurrences(text, wordsSet);
+    
+            // Print results
+            console.log("Word counts:");
+            let result = {};
+            for (let word of wordsArray) {
+                result[word] = wordCounts[word.toLowerCase()] || 0;
+            }
+            console.log(result);
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+        } finally {
+            console.log("Program execution completed.");
+        }
+    }
+    
+    // Run the program
+    main();
+    
+</script>
+
+</html>

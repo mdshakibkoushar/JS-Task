@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Task 21 march</h1>
+</body>
+<script>
+    // Function to concatenate two strings
+ function concatenateStrings(str1, str2) {
+   return str1 + str2;
+ }
+ console.log(
+   "Add String: " + concatenateStrings("shakib ", "koushar")
+ );
+
+
+ // Function to find the length of a string
+ function findStringLength(str) {
+   return str.length;
+ }
+ console.log("Length of String: " + findStringLength("telus"));
+
+
+ // Function to convert a string to uppercase
+ function convertToUppercase(str) {
+   return str.toUpperCase();
+ }
+ console.log("Uppercase " + convertToUppercase("Hello World"));
+
+
+ // Function to convert a string to lowercase
+ function convertToLowercase(str) {
+   return str.toLowerCase();
+ }
+ console.log("Lowercase  " + convertToLowercase("Hello World"));
+
+
+ // Function to extract a substring from a given string
+ function extractSubstring(str, startIndex, length) {
+   return str.substring(startIndex, startIndex + length);
+ }
+ console.log("Substring: " + extractSubstring("Hello World", 6, 5));
+
+
+ // Function to perform numerical addition
+ function addNumbers(num1, num2) {
+   return num1 + num2;
+ }
+
+ // Function to perform numerical subtraction
+ function subtractNumbers(num1, num2) {
+   return num1 - num2;
+ }
+
+
+ // Function to perform numerical multiplication
+ function multiplyNumbers(num1, num2) {
+   return num1 * num2;
+ }
+
+
+ // Function to perform numerical division
+ function divideNumbers(num1, num2) {
+   if (num2 === 0) {
+     return "Cannot divide by zero!";
+   }
+   return num1 / num2;
+ }
+
+ console.log("Addition: " + addNumbers(4, 3));
+ console.log("Subtraction: " + subtractNumbers(3, 3));
+ console.log("Multiplication: " + multiplyNumbers(4, 3));
+ console.log("Division: " + divideNumbers(6, 2));
+
+
+
+ // Function to find the square root of a number
+ function findSquareRoot(num) {
+   return Math.sqrt(num);
+ }
+ console.log("Square Root: " + findSquareRoot(36));
+ 
+
+ // Function to round a number to a specified number of decimal places
+ function roundNumber(num, decimalPlaces) {
+   return num.toFixed(decimalPlaces);
+ }
+ console.log("Rounded Number: " + roundNumber(5.14159, 2));
+
+   
+ </script>
+</html>

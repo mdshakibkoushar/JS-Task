@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form id="registrationForm">
+        <div>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+            required
+          />
+        </div>
+        <div class="f">
+          <label>Gender:</label>
+          <label
+            ><input type="radio" name="gender" value="male" required />
+            Male</label
+          >
+          <label
+            ><input type="radio" name="gender" value="female" /> Female</label
+          >
+          <label
+            ><input type="radio" name="gender" value="other" /> Other</label
+          >
+        </div>
+        <div>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div>
+          <label for="transport">Transport:</label>
+          <select id="transport" name="transport" required>
+            <option value="bike">Select</option>
+            <option value="bike">Bike</option>
+            <option value="car">Car</option>
+            <option value="taxi">Taxi</option>
+            <option value="metro">Metro</option>
+            <option value="metro">Bus</option>
+          </select>
+        </div>
+        <div class="f">
+          <input type="checkbox" id="agree" name="agree" required/>
+          <label for="agree">I agree to the <a>Terms & Conditions</a></label>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
